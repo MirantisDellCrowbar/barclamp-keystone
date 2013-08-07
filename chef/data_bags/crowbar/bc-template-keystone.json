@@ -27,8 +27,8 @@
         "python-iso8601",
         "python-webob",
         "python-virtualenv",
-        "pip://python-keystoneclient>=0.3"
-        "pip://d2to1>=0.2.10"
+        "pip://python-keystoneclient>=0.3",
+        "pip://d2to1>=0.2.10",
         "pip://pbr>=0.5"
       ],
       "use_syslog": false,
