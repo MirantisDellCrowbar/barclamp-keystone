@@ -7,7 +7,7 @@
       "frontend": "apache",
       "verbose": false,
       "gitrepo": "http://github.com/openstack/keystone.git",
-      "git_instance": "",
+      "git_instance": "2013.2.b2",
       "git_refspec": "stable/grizzly",
       "use_gitbarclamp": false,
       "use_pip_cache": false,
