@@ -8,7 +8,7 @@
       "verbose": false,
       "gitrepo": "http://github.com/openstack/keystone.git",
       "git_instance": "",
-      "git_refspec": "2013.2.b2",
+      "git_refspec": "7b4fedeed3517a17d32dad820bae2a49dd6c3e1b",
       "use_gitbarclamp": false,
       "use_pip_cache": false,
       "use_gitrepo": false,
