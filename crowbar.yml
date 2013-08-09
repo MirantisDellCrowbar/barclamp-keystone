@@ -64,8 +64,7 @@ debs:
     - python-keystone
     - apache2
     - libapache2-mod-wsgi
-    
-   pips:
+  pips:
     - setuptools-git
 
 git_repo:
