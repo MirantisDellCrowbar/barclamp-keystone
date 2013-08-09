@@ -30,7 +30,6 @@
         "pip://d2to1>=0.2.10,<0.3",
         "pip://pbr>=0.5,<0.6",
         "pip://setuptools-git"
-        
       ],
       "use_syslog": false,
       "database_instance": "none",
