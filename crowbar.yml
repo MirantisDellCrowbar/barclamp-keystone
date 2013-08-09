@@ -65,7 +65,7 @@ debs:
     - apache2
     - libapache2-mod-wsgi
 pips:
-- setuptools-git
+  - setuptools-git
 
 git_repo:
   - keystone https://github.com/openstack/keystone.git  7b4fedeed3517a17d32dad820bae2a49dd6c3e1b
