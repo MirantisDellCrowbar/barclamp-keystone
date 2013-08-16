@@ -242,6 +242,14 @@ template "/etc/keystone/keystone.conf" do
     end
 end
 
+# Ensuring that keystone log file is under correct ownership
+file "/var/log/keystone/keystone.log" do
+  owner "#{node[:keystone][:user]}"
+  group "root"
+  mode 0644
+end
+
+
 execute "keystone-manage db_sync" do
   command "#{venv_prefix}keystone-manage db_sync"
   action :run
