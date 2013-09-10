@@ -27,7 +27,7 @@
         "python-iso8601",
         "python-webob",
         "python-virtualenv",
-        "pip://python-keystoneclient>=0.2,<0.3"
+        "pip://MySQL-python"
       ],
       "use_syslog": false,
       "database_instance": "none",
@@ -39,10 +39,9 @@
         "idle_timeout": 30
       },
       "ssl": {
+        "insecure": false,
         "certfile": "/etc/keystone/ssl/certs/signing_cert.pem",
         "keyfile": "/etc/keystone/ssl/private/signing_key.pem",
-        "generate_certs": false,
-        "insecure": false,
         "cert_required": false,
         "ca_certs": "/etc/keystone/ssl/certs/ca.pem"
       },
@@ -68,26 +67,11 @@
         "username": "crowbar",
         "password": "crowbar"
       },
-      "identity": {
-        "driver": "keystone.identity.backends.sql.Identity"
-      },
       "signing": {
         "token_format": "PKI",
         "certfile": "/etc/keystone/ssl/certs/signing_cert.pem",
         "keyfile": "/etc/keystone/ssl/private/signing_key.pem",
         "ca_certs": "/etc/keystone/ssl/certs/ca.pem"
-      },
-      "ldap" : {
-        "url": "ldap://localhost",
-        "user": "dc=Manager,dc=example,dc=com",
-        "password": "",
-        "suffix": "cn=example,cn=com",
-        "use_dumb_member": false,
-        "allow_subtree_delete": false,
-        "dumb_member": "cn=dumb,dc=example,dc=com",
-        "page_size": 0,
-        "alias_dereferencing": "default",
-        "query_scope": "one"
       }
     }
   },
