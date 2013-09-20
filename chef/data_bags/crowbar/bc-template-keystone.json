@@ -14,7 +14,8 @@
       "use_gitrepo": false,
       "use_virtualenv": false,
       "pfs_deps": [
-          "pip://distribute>=0.6.28"
+          "pip://distribute>=0.6.28",
+          "pip://MySQL-python"
       ],
       "use_syslog": false,
       "database_instance": "none",
