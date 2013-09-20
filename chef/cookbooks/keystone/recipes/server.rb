@@ -250,7 +250,11 @@ end
 
 if node[:keystone][:signing][:token_format] == "PKI"
   execute "keystone-manage pki_setup" do
-    command "keystone-manage pki_setup ; chown #{node[:keystone][:user]} -R /etc/keystone/ssl/"
+    command "keystone-manage --keystone-user #{node[:keystone][:user]} --keystone-group  #{node[:keystone][:user]} pki_setup ; chown #{node[:keystone][:user]} -R /etc/keystone/ssl/"
+    action :run
+  end
+  execute "keystone-manage pki_setup" do
+    command "keystone-manage --keystone-user #{node[:keystone][:user]} --keystone-group  #{node[:keystone][:user]} ssl_setup ; chown #{node[:keystone][:user]} -R /etc/keystone/ssl/"
     action :run
   end
 end unless node.platform == "suse"
