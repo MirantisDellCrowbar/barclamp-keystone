@@ -228,7 +228,7 @@ template "/etc/keystone/keystone.conf" do
 end
 
 execute "keystone-manage db_sync" do
-  command "#{venv_prefix}keystone-manage db_sync"
+  command "keystone-manage db_sync"
   action :run
 end
 

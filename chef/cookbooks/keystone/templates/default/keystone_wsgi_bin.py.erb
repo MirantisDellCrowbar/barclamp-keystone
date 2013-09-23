@@ -1,6 +1,7 @@
 <% if @venv -%>
-execfile('<%= @venv_path %>/bin/activate_this.py', dict(__file__='<%= @venv_path %>/bin/activate_this.py'))
+    execfile('<%= @venv_path %>/bin/activate_this.py', dict(__file__='<%= @venv_path %>/bin/activate_this.py'))
 <% end -%>
+
 import os
 
 from paste import deploy
@@ -28,4 +29,3 @@ CONF.log_opt_values(logging.getLogger(CONF.prog), logging.DEBUG)
 # http://pythonpaste.org/deploy/
 application = deploy.loadapp('config:%s' % config.find_paste_config(),
 name=name)
-
